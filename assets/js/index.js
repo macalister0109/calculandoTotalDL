@@ -1,10 +1,11 @@
 precio = 400000;
 precioSpan = document.querySelector(".precio-inicial");
 precioSpan.innerHTML = precio;
+
 function adicionarElemento(){
     cantidad = document.querySelector('.cantidad');
     valorCantidad = Number(cantidad.innerHTML);
-    valorCantidad++;
+    valorCantidad=valorCantidad+1;
     cantidad.innerHTML = valorCantidad;
 }
 
@@ -26,3 +27,10 @@ function calcularPrecio(){
     valorTotal.innerHTML = precioFinal;
     
 }
+
+const botonAdd = document.getElementById('add');
+const botonRest = document.getElementById('rem');
+botonAdd.addEventListener('click', calcularPrecio);
+botonRest.addEventListener('click', calcularPrecio);
+
+
