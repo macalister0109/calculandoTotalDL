@@ -11,6 +11,9 @@ function adicionarElemento(){
 function restarElemento(){
     cantidad = document.querySelector('.cantidad');
     valorCantidad = Number(cantidad.innerHTML);
+    if(valorCantidad == 0){
+        return;
+    }
     valorCantidad--;
     cantidad.innerHTML = valorCantidad;
 }
